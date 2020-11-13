@@ -7,9 +7,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class EndPageComponent {
 
+  @Input() showExitOption: boolean
   @Input() contentName: string;
   @Input() pagesRead: number;
   @Input() userName: string;
   @Input() timeSpentLabel: string;
   @Output() replayContent = new EventEmitter<any>();
+  @Output() exitContent = new EventEmitter<any>();
+
 }
